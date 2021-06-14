@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/math-base-special-cround",
-  "version": "0.0.1-alpha.2",
+  "version": "0.0.1",
   "description": "Round a complex number to the nearest integer.",
   "license": "Apache-2.0",
   "author": {
