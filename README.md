@@ -18,76 +18,82 @@ limitations under the License.
 
 -->
 
-# Round
+# cround
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Round a complex number to the nearest integer.
+> Round each component of a double-precision complex floating-point number to the nearest integer.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-cround
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
+```javascript
+var cround = require( '@stdlib/math-base-special-cround' );
+```
+
+#### cround( z )
+
+Rounds each component of a double-precision complex floating-point number to the nearest integer.
 
 ```javascript
-cround = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cround@umd/browser.js' )
-```
+var Complex128 = require( '@stdlib/complex-float64' );
+var real = require( '@stdlib/complex-real' );
+var imag = require( '@stdlib/complex-imag' );
 
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+var v = cround( new Complex128( -4.2, 5.5 ) );
+// returns <Complex128>
 
-```javascript
-var cround = require( 'path/to/vendor/umd/math-base-special-cround/index.js' )
-```
+var re = real( v );
+// returns -4.0
 
-To include the bundle in a webpage,
+var im = imag( v );
+// returns 6.0
 
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cround@umd/browser.js"></script>
-```
+v = cround( new Complex128( 9.99999, 0.1 ) );
+// returns <Complex128>
 
-If no recognized module system is present, access bundle contents via the global scope:
+re = real( v );
+// returns 10.0
 
-```html
-<script type="text/javascript">
-(function () {
-    window.cround;
-})();
-</script>
-```
+im = imag( v );
+// returns 0.0
 
-#### cround( \[out,] re, im )
+v = cround( new Complex128( 0.0, 0.0 ) );
+// returns <Complex128>
 
-Rounds a `complex` number comprised of a **real** component `re` and an **imaginary** component `im` to the nearest integer.
+re = real( v );
+// returns 0.0
 
-```javascript
-var v = cround( -4.2, 5.5 );
-// returns [ -4.0, 6.0 ]
+im = imag( v );
+// returns 0.0
 
-v = cround( 9.99999, 0.1 );
-// returns [ 10.0, 0.0 ]
+v = cround( new Complex128( NaN, NaN ) );
+// returns <Complex128>
 
-v = cround( 0.0, 0.0 );
-// returns [ 0.0, 0.0 ]
+re = real( v );
+// returns NaN
 
-v = cround( NaN, NaN );
-// returns [ NaN, NaN ]
-```
-
-By default, the function returns real and imaginary components as a two-element `array`. To avoid unnecessary memory allocation, the function supports providing an output (destination) object.
-
-```javascript
-var Float64Array = require( '@stdlib/array-float64' );
-
-var out = new Float64Array( 2 );
-
-var v = cround( out, -4.2, 5.5 );
-// returns <Float64Array>[ -4.0, 6.0 ]
-
-var bool = ( v === out );
-// returns true
+im = imag( v );
+// returns NaN
 ```
 
 </section>
@@ -100,43 +106,135 @@ var bool = ( v === out );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-real@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-imag@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cround@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var uniform = require( '@stdlib/random-base-uniform' ).factory;
+var Complex128 = require( '@stdlib/complex-float64' );
+var cround = require( '@stdlib/math-base-special-cround' );
 
-var re;
-var im;
+var rand = uniform( -50.0, 50.0 );
+
 var z;
-var o;
-var w;
 var i;
-
 for ( i = 0; i < 100; i++ ) {
-    re = ( randu()*100.0 ) - 50.0;
-    im = ( randu()*100.0 ) - 50.0;
-    z = new Complex128( re, im );
-    o = cround( real(z), imag(z) );
-    w = new Complex128( o[ 0 ], o[ 1 ] );
-    console.log( 'round(%s) = %s', z.toString(), w.toString() );
+    z = new Complex128( rand(), rand() );
+    console.log( 'cround(%s) = %s', z, cround( z ) );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
 
 <!-- /.examples -->
+
+<!-- C interface documentation. -->
+
+* * *
+
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/math/base/special/cround.h"
+```
+
+#### stdlib_base_cround( z )
+
+Rounds each component of a double-precision complex floating-point number to the nearest integer.
+
+```c
+#include "stdlib/complex/float64.h"
+#include "stdlib/complex/real.h"
+#include "stdlib/complex/imag.h"
+
+stdlib_complex128_t z = stdlib_complex128( -4.2, 5.5 );
+
+stdlib_complex128_t out = stdlib_base_cround( z );
+
+double re = stdlib_real( out );
+// returns -4.0
+
+double im = stdlib_imag( out );
+// returns 6.0
+```
+
+The function accepts the following arguments:
+
+-   **z**: `[in] stdlib_complex128_t` input value.
+
+```c
+stdlib_complex128_t stdlib_base_cround( const stdlib_complex128_t z );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/math/base/special/cround.h"
+#include "stdlib/complex/float64.h"
+#include "stdlib/complex/reim.h"
+#include <stdio.h>
+
+int main( void ) {
+    const stdlib_complex128_t x[] = {
+        stdlib_complex128( 3.14, 1.5 ),
+        stdlib_complex128( -3.14, -1.5 ),
+        stdlib_complex128( 0.0, 0.0 ),
+        stdlib_complex128( 0.0/0.0, 0.0/0.0 )
+    };
+
+    stdlib_complex128_t v;
+    stdlib_complex128_t y;
+    double re1;
+    double im1;
+    double re2;
+    double im2;
+    int i;
+    for ( i = 0; i < 4; i++ ) {
+        v = x[ i ];
+        y = stdlib_base_cround( v );
+        stdlib_reim( v, &re1, &im1 );
+        stdlib_reim( y, &re2, &im2 );
+        printf( "cround(%lf + %lfi) = %lf + %lfi\n", re1, im1, re2, im2 );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -225,11 +323,11 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/cceil]: https://github.com/stdlib-js/math-base-special-cceil/tree/umd
+[@stdlib/math/base/special/cceil]: https://github.com/stdlib-js/math-base-special-cceil
 
-[@stdlib/math/base/special/cfloor]: https://github.com/stdlib-js/math-base-special-cfloor/tree/umd
+[@stdlib/math/base/special/cfloor]: https://github.com/stdlib-js/math-base-special-cfloor
 
-[@stdlib/math/base/special/croundn]: https://github.com/stdlib-js/math-base-special-croundn/tree/umd
+[@stdlib/math/base/special/croundn]: https://github.com/stdlib-js/math-base-special-croundn
 
 <!-- </related-links> -->
 
