@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import cround from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cround@esm/index.mjs';
+import cround from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cround@v0.1.0-esm/index.mjs';
 ```
 
 #### cround( z )
@@ -109,7 +109,7 @@ im = imag( v );
 
 var uniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform' ).factory;
 import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64@esm/index.mjs';
-import cround from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cround@esm/index.mjs';
+import cround from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cround@v0.1.0-esm/index.mjs';
 
 var rand = uniform( -50.0, 50.0 );
 
