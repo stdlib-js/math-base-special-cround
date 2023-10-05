@@ -45,19 +45,19 @@
     "@stdlib/complex-real": "^0.1.0",
     "@stdlib/complex-reim": "^0.1.0",
     "@stdlib/math-base-napi-unary": "^0.1.0",
-    "@stdlib/math-base-special-round": "^0.1.0",
+    "@stdlib/math-base-special-round": "^0.1.1",
     "@stdlib/types": "^0.1.0",
-    "@stdlib/utils-library-manifest": "^0.1.0"
+    "@stdlib/utils-library-manifest": "^0.1.1"
   },
   "devDependencies": {
     "@stdlib/bench": "^0.1.0",
-    "@stdlib/constants-float64-ninf": "^0.1.0",
-    "@stdlib/constants-float64-pinf": "^0.1.0",
-    "@stdlib/math-base-assert-is-nan": "^0.1.0",
-    "@stdlib/math-base-assert-is-negative-zero": "^0.1.0",
-    "@stdlib/math-base-assert-is-positive-zero": "^0.1.0",
+    "@stdlib/constants-float64-ninf": "^0.1.1",
+    "@stdlib/constants-float64-pinf": "^0.1.1",
+    "@stdlib/math-base-assert-is-nan": "^0.1.1",
+    "@stdlib/math-base-assert-is-negative-zero": "^0.1.1",
+    "@stdlib/math-base-assert-is-positive-zero": "^0.1.1",
     "@stdlib/random-base-uniform": "^0.1.0",
-    "@stdlib/utils-try-require": "^0.1.0",
+    "@stdlib/utils-try-require": "^0.1.1",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
     "tap-min": "git+https://github.com/Planeshifter/tap-min.git"
