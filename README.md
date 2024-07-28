@@ -69,8 +69,8 @@ Rounds each component of a double-precision complex floating-point number to the
 
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64-ctor' );
-var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var real = require( '@stdlib/complex-float64-real' );
+var imag = require( '@stdlib/complex-float64-imag' );
 
 var v = cround( new Complex128( -4.2, 5.5 ) );
 // returns <Complex128>
@@ -170,17 +170,17 @@ Rounds each component of a double-precision complex floating-point number to the
 
 ```c
 #include "stdlib/complex/float64/ctor.h"
-#include "stdlib/complex/real.h"
-#include "stdlib/complex/imag.h"
+#include "stdlib/complex/float64/real.h"
+#include "stdlib/complex/float64/imag.h"
 
 stdlib_complex128_t z = stdlib_complex128( -4.2, 5.5 );
 
 stdlib_complex128_t out = stdlib_base_cround( z );
 
-double re = stdlib_real( out );
+double re = stdlib_complex128_real( out );
 // returns -4.0
 
-double im = stdlib_imag( out );
+double im = stdlib_complex128_imag( out );
 // returns 6.0
 ```
 
@@ -304,8 +304,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/math-base-special-cround.svg
 [npm-url]: https://npmjs.org/package/@stdlib/math-base-special-cround
 
-[test-image]: https://github.com/stdlib-js/math-base-special-cround/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/math-base-special-cround/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/math-base-special-cround/actions/workflows/test.yml/badge.svg?branch=v0.2.2
+[test-url]: https://github.com/stdlib-js/math-base-special-cround/actions/workflows/test.yml?query=branch:v0.2.2
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/math-base-special-cround/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/math-base-special-cround?branch=main
