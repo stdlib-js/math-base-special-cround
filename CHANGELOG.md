@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-08-03)
+## Unreleased (2024-09-01)
 
 <section class="commits">
 
@@ -170,13 +170,11 @@ No changes reported for this release.
 
 ### BREAKING CHANGES
 
--   [`58832ee`](https://github.com/stdlib-js/stdlib/commit/58832eef6d93e6519622148242600eae93dca4d9): update minimum TypeScript version
--   [`58832ee`](https://github.com/stdlib-js/stdlib/commit/58832eef6d93e6519622148242600eae93dca4d9): update minimum TypeScript version to 4.1 
+-   [`58832ee`](https://github.com/stdlib-js/stdlib/commit/58832eef6d93e6519622148242600eae93dca4d9): update minimum TypeScript version to 4.1
 
     -   To migrate, users should upgrade their TypeScript version to at least version 4.1.
 
--   [`bf938e6`](https://github.com/stdlib-js/stdlib/commit/bf938e61e33c5462b6ff7ae0afb1028d16308353): refactor to support Complex128 and add C implementation
--   [`bf938e6`](https://github.com/stdlib-js/stdlib/commit/bf938e61e33c5462b6ff7ae0afb1028d16308353): refactor to support Complex128 
+-   [`bf938e6`](https://github.com/stdlib-js/stdlib/commit/bf938e61e33c5462b6ff7ae0afb1028d16308353): refactor to support Complex128
 
     -   To migrate, end users will need to provide a Complex128 object.
 
