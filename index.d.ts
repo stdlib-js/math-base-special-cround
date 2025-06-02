@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,61 +16,35 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { Complex128 } from '@stdlib/types/complex';
 
 /**
-* Round each component of a double-precision complex floating-point number to the nearest integer.
+* Rounds each component of a double-precision complex floating-point number to the nearest integer.
 *
-* @module @stdlib/math-base-special-cround
+* @param z - input value
+* @returns result
 *
 * @example
 * var Complex128 = require( '@stdlib/complex-float64-ctor' );
 * var real = require( '@stdlib/complex-float64-real' );
 * var imag = require( '@stdlib/complex-float64-imag' );
-* var cround = require( '@stdlib/math-base-special-cround' );
 *
-* var v = cround( new Complex128( -4.2, 5.5 ) );
+* var v = cceil( new Complex128( -4.2, 5.5 ) );
 * // returns <Complex128>
 *
 * var re = real( v );
-* // returns -5.0
+* // returns -4.0
 *
 * var im = imag( v );
 * // returns 6.0
-*
-* v = cround( new Complex128( 9.99999, 0.1 ) );
-* // returns <Complex128>
-*
-* re = real( v );
-* // returns 10.0
-*
-* im = imag( v );
-* // returns 0.0
-*
-* v = cround( new Complex128( 0.0, 0.0 ) );
-* // returns <Complex128>
-*
-* re = real( v );
-* // returns 0.0
-*
-* im = imag( v );
-* // returns 0.0
-*
-* v = cround( new Complex128( NaN, NaN ) );
-* // returns <Complex128>
-*
-* re = real( v );
-* // returns NaN
-*
-* im = imag( v );
-* // returns NaN
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function cround( z: Complex128 ): Complex128;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = cround;
