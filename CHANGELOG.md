@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-12-04)
+## Unreleased (2025-12-13)
 
 <section class="reverts">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`2c59b22`](https://github.com/stdlib-js/stdlib/commit/2c59b225c1d4d2b05bc433837e1c286535783443) - **docs:** improve doctests for complex number instances in `math/base/special/cround` [(#9025)](https://github.com/stdlib-js/stdlib/pull/9025) _(by Prajjwal Bajpai, Philipp Burckhardt)_
 -   [`f7920f6`](https://github.com/stdlib-js/stdlib/commit/f7920f615bfab41bd0c25dd7310d4ef473a1c9fe) - **chore:** add structured package data for `math/base/special/cround` [(#8770)](https://github.com/stdlib-js/stdlib/pull/8770) _(by Aman Singh)_
 -   [`39cac36`](https://github.com/stdlib-js/stdlib/commit/39cac36da035a7b020cf3d3aee15ed065bac9fb2) - **docs:** update related packages sections [(#8609)](https://github.com/stdlib-js/stdlib/pull/8609) _(by stdlib-bot)_
 -   [`2cf7f78`](https://github.com/stdlib-js/stdlib/commit/2cf7f78c164b51a905e7df83c99e0404ac55fe39) - **docs:** correct function names, return values, and method calls in TypeScript declaration examples _(by Philipp Burckhardt)_
@@ -44,13 +45,14 @@
 
 ### Contributors
 
-A total of 5 people contributed to this release. Thank you to the following contributors:
+A total of 6 people contributed to this release. Thank you to the following contributors:
 
 -   Aman Singh
 -   Athan Reines
 -   Gunj Joshi
 -   Karan Anand
 -   Philipp Burckhardt
+-   Prajjwal Bajpai
 
 </section>
 
