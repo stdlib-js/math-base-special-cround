@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import cround from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cround@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-cround/tags). For example,
+
+```javascript
 import cround from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cround@v0.2.3-deno/mod.js';
 ```
 
@@ -78,7 +83,7 @@ v = cround( new Complex128( NaN, NaN ) );
 ```javascript
 var uniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform' ).factory;
 import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@deno/mod.js';
-import cround from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cround@v0.2.3-deno/mod.js';
+import cround from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cround@deno/mod.js';
 
 var rand = uniform( -50.0, 50.0 );
 
