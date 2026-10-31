@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-10-21)
+## Unreleased (2026-10-31)
+
+<section class="features">
+
+### Features
+
+-   [`70c9c47`](https://github.com/stdlib-js/stdlib/commit/70c9c47836b664e425f90dc6db6769f0829832bf) - add `assign` and `strided` methods to `math/base/special/cround` [(#16026)](https://github.com/stdlib-js/stdlib/pull/16026)
+
+</section>
+
+<!-- /.features -->
 
 <section class="bug-fixes">
 
@@ -22,6 +32,7 @@
 
 <details>
 
+-   [`70c9c47`](https://github.com/stdlib-js/stdlib/commit/70c9c47836b664e425f90dc6db6769f0829832bf) - **feat:** add `assign` and `strided` methods to `math/base/special/cround` [(#16026)](https://github.com/stdlib-js/stdlib/pull/16026) _(by Karan Anand)_
 -   [`c568729`](https://github.com/stdlib-js/stdlib/commit/c568729af2a4908e564647f15cadccc8ad62f59b) - **docs:** update Markdown equation elements _(by stdlib-bot)_
 -   [`e67a5aa`](https://github.com/stdlib-js/stdlib/commit/e67a5aad659d8f6623e4ab8ac94687a8586ea83a) - **docs:** update Markdown equation elements _(by stdlib-bot)_
 -   [`85f4853`](https://github.com/stdlib-js/stdlib/commit/85f48534ef6908bbcd982d48f1c5fbea3fb7aafd) - **docs:** update Markdown equation SVGs _(by stdlib-bot)_

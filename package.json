@@ -40,6 +40,7 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
+    "@stdlib/array-float64": "^0.2.3",
     "@stdlib/complex-float64-ctor": "^0.1.2",
     "@stdlib/complex-float64-imag": "^0.1.2",
     "@stdlib/complex-float64-real": "^0.1.2",
@@ -47,15 +48,20 @@
     "@stdlib/math-base-napi-unary": "^0.2.7",
     "@stdlib/math-base-special-round": "^0.3.1",
     "@stdlib/types": "^0.5.1",
+    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.3",
     "@stdlib/utils-library-manifest": "^0.2.4"
   },
   "devDependencies": {
+    "@stdlib/array-complex128": "^0.3.2",
+    "@stdlib/assert-is-method": "^0.2.3",
+    "@stdlib/assert-is-same-float64array": "^0.2.3",
+    "@stdlib/console-log-each-map": "^0.1.2",
     "@stdlib/constants-float64-ninf": "^0.2.3",
     "@stdlib/constants-float64-pinf": "^0.2.3",
     "@stdlib/math-base-assert-is-nan": "^0.2.3",
     "@stdlib/math-base-assert-is-negative-zero": "^0.2.3",
     "@stdlib/math-base-assert-is-positive-zero": "^0.2.3",
-    "@stdlib/random-base-uniform": "^0.2.3",
+    "@stdlib/random-array-uniform": "^0.2.2",
     "@stdlib/string-format": "^0.2.3",
     "@stdlib/utils-try-require": "^0.2.3",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
